@@ -1,9 +1,10 @@
 body {
-    background-color: rgb(205, 163, 190);
+    background-image: linear-gradient(to right ,rgb(199, 129, 129), rgb(179, 146, 217) ,rgb(222, 149, 191));
+    height: 100%;
 
 }
 
-.mid {
+#mid {
     align-items: center;
 }
 
@@ -12,13 +13,13 @@ body {
     padding: 20px;
 } 
 
-.mid input {
+#mid input {
     padding: 10px;
     border: 2px solid blue;
-    width: 50%;
+    width: 60%;
 }
 
-.mid input::placeholder {
+#mid input::placeholder {
     text-align: center;
     font-weight: bold;
     color: black;
@@ -160,3 +161,6 @@ h2 {
     text-align: center;
     margin: auto;
 }
+
+
+

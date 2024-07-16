@@ -1,5 +1,7 @@
 <?php
-include("create/database.php");
+include("database.php");
+
+include("middleware.php");
 
 //delete query
 if (isset($_GET['id'])) {
@@ -34,7 +36,7 @@ $result = $connect->query($sql);
 
 <body>
 
-<a href="add_user.php" class="add">ADDd DATA</a>
+<a href="add_user.php" class="add">ADD DATA</a>
 <h2>User Data</h2>
 
     <table class="tb">
@@ -74,6 +76,9 @@ $result = $connect->query($sql);
                 echo "not found data";
             }
             ?>
+
+<a href="admin.php" id="lo"> Log out </a>
+
         </tbody>
     </table>
 </body>

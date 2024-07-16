@@ -1,5 +1,6 @@
 <?php
-include("create/database.php");
+include("database.php");
+include("middleware.php");
 
 if (isset($_POST['submit'])) {
     $name = isset($_POST['name']) ? $_POST['name'] : '';
@@ -33,18 +34,20 @@ if (isset($_POST['submit'])) {
 <link rel="stylesheet" href="style1.css">
 
 <body>
+<?php include("alert.php"); ?>
 
     <center>
+
         <div id="user">
             <h2>User Add</h2>
 
             <form action="add_user.php" method="POST">
-                <input type="text" name="name" placeholder="Enter your name ">
+                <input type="text" name="name" placeholder="Enter your name " required>
                 <br><br><br>
-                <input type="text" name="age" placeholder="Enter your age ">
+                <input type="text" name="age" placeholder="Enter your age " required>
                 <br><br><br>
 
-                <input type="text" name="city" placeholder="Enter your city">
+                <input type="text" name="city" placeholder="Enter your city" required>
 
                 <br><br><br>
                 <button type="submit" name="submit">ADD</button>
@@ -54,6 +57,8 @@ if (isset($_POST['submit'])) {
 
     </center>
     <a href="users.php" class="al"> All Users </a>
+    <a href="admin.php" class="al"> Log Out </a>
+
 </body>
 
 </html>

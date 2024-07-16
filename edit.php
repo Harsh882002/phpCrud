@@ -1,5 +1,7 @@
 <?php
-include("create/database.php");
+include("database.php");
+include("middleware.php");
+
 
 // Fetch user details if ID is provided in the URL
 if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -47,12 +49,12 @@ if (isset($_POST['submit'])) {
         <div id="ed">
             <h3>Edit User</h3>
             <form action="edit.php?id=<?php echo $user['id'] ?>" method="POST">
-                <input type="text" name="name" placeholder="Enter your name " value="<?php echo $user['name'] ?>">
+                <input type="text" name="name" placeholder="Enter your name " value="<?php echo $user['name'] ?>" required>
                 <br><br><br>
-                <input type="text" name="age" placeholder="Enter your age " value="<?php echo $user['age'] ?>">
+                <input type="text" name="age" placeholder="Enter your age " value="<?php echo $user['age'] ?>" required>
                 <br><br><br>
 
-                <input type="text" name="city" placeholder="Enter your city" value="<?php echo $user['city'] ?>">
+                <input type="text" name="city" placeholder="Enter your city" value="<?php echo $user['city'] ?>" required>
 
                 <br><br><br>
                 <button type="submit" name="submit">Edit</button>
